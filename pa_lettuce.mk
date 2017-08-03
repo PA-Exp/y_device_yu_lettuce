@@ -11,16 +11,23 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+ifeq (pa_lettuce,$(TARGET_PRODUCT))
+
+TARGET_BOOT_ANIMATION_RES := 720
 
 $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 
 # Inherit some common LineageOS stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+$(call inherit-product, vendor/pa/main.mk)
+
+# Inherit some common stuffs
+include device/qcom/common/common.mk
+
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := lineage_lettuce
+PRODUCT_NAME := pa_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
