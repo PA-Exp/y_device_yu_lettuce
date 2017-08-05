@@ -9,6 +9,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.always_show_roaming=true \
     ro.telephony.default_network=9,9
 
+# Radio
+PRODUCT_PACKAGES += \
+   libril_shim \
+   libprotobuf-cpp-full
+
 # RIL
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/data/netmgr_config.xml:system/etc/data/netmgr_config.xml \
