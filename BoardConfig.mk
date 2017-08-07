@@ -22,3 +22,6 @@ TARGET_BOARD_INFO_FILE := device/yu/lettuce/board-info.txt
 
 # Inherit from proprietary files
 include vendor/yu/lettuce/BoardConfigVendor.mk
+
+#Audio
+AUDIO_FEATURE_ENABLED_VORBIS_OFFLOAD := true
